@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule payment-success success_payment.php
+RewriteRule payment-error error_payment.php
+RewriteRule payment-invoice get_invoice.php
+RewriteRule payment-callback callback_payment.php
+RewriteRule invoice-list invoices/invoice_list.php

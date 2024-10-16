@@ -1,0 +1,30 @@
+--
+-- Structure de la table `invoices`
+--
+
+CREATE TABLE `invoices` (
+  `id` int(11) NOT NULL,
+  `invoice_number` varchar(50) NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `invoice_amount` decimal(10,2) NOT NULL,
+  `client_email` varchar(500) DEFAULT NULL,
+  `client_address` varchar(200) NOT NULL,
+  `client_city` varchar(200) NOT NULL,
+  `client_postal_code` varchar(100) NOT NULL,
+  `invoice_date` date DEFAULT current_timestamp(),
+  `invoice_status` int(11) NOT NULL DEFAULT 0,
+  `invoice_payment_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+
+
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
